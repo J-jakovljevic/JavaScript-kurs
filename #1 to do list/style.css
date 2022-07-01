@@ -1,0 +1,105 @@
+.header {
+    background-color: #f44336;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    min-width: 250px;
+  }
+
+input {
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+    border: 0;
+    float: left;
+    border-radius: 50;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .addBtn {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    display: block;
+    width: 15%;
+    background: #d9d9d9;
+    cursor: pointer;
+    color: #555;
+    float: left;
+    transition: 0.3s;
+  
+  }
+
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+ ul li {
+    padding: 5px 10px;
+    background-color: #eee;
+    font-size: 18px;
+    padding: 12px 12px 12px 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+
+  }
+
+/* Zebra boje */
+ ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+  ul li:hover {
+    background: #ddd;
+  }
+
+/* prilikom klika precrtava tekst i menja boju da je cekirano */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+/* dodaje oznaku za checked prilikom klika */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0px 2px 2px 0px; /* pomocu ovoga se kreira znak otkaceno */
+    width: 7px;
+    height: 15px;
+    left: 25px;
+    transform: rotate(45deg); /* bez ovoga umesto otkacenog prikazuje uspravnu liniju */
+  }
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
