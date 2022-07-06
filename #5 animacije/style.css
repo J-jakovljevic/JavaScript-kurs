@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box; /* omogucuje da se u ukupnu sirinu i visinu elementa ukljuce padding i border
+                            width + padding + border = actual width of an element */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.section {
+    height: 100vh;  /* sekcija ce se smanjiti za 100% u odnosu na visinu browsera? */
+}
+
+.section h1 {
+    text-align: center;
+    line-height: 100vh; /* udaljava tekst od gornje ivice browsera */
+    font-size: 5rem;
+    letter-spacing: 1px;  /* rasiruje tekst - razmak izmedju slova */
+    text-transform: uppercase;
+    
+}
+
+.section .fadeMove {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.section h1 span {
+    opacity: 0;  /* namestanje da se tekst ne vidi */
+    transition: all 0.3s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+.section2 .images {
+    display: flex;
+}
+
+.section2 .images img{
+    width: 50%;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.section2 .images img.slideFromLeft {
+    transform: translateX(-50%);
+}
+
+.section2 .images img.slideFromRight {
+    transform: translateX(50%);
+}
+
+.section2 .images img.animated {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.section2 h1 {
+    line-height: 1.3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 3rem;  /* 1rem = velicini fonta html elementa (16px) */
+    text-transform: capitalize;  /* prvo slovo svake reci bice veliko */
+}
+
+.border-line {
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: all 0.5s ease;  /* za fino povecanje vrednosti linije */
+}
